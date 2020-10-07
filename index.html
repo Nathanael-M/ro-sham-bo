@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+    <script>
+
+    function roshambo(){
+
+        let play = confirm('Would you like to play Ro-Sham-Bo?')
+
+        if (play) {
+
+            const options = ['rock', 'paper', 'scissors'];
+
+            const player1 = prompt("Rock, Paper, or Scissors?").toLowerCase();
+            let player2 = options[Math.floor(Math.random() * Math.floor(3))];
+
+            if (player1 == player2){
+                alert(`Player 1: ${player1}\nPlayer 2: ${player2}\nTie!`);
+            }
+
+            else if (player1 == 'rock' && player2 == 'scissors'){
+                alert(`Player 1: ${player1}\nPlayer 2: ${player2}\nPlayer 1 wins!`)
+            }
+
+            else if (player2 == 'paper' && player2 == 'rock'){
+                alert(`Player 1: ${player1}\nPlayer 2: ${player2}\nPlayer 1 wins!`)
+            }
+
+            else if (player1 == 'scissors' && player2 == 'paper'){
+                alert(`Player 1: ${player1}\nPlayer 2: ${player2}\nPlayer 1 wins!`)
+            }
+
+            else {
+                alert(`Player 1: ${player1}\nPlayer 2: ${player2}\nPlayer 2 wins!`);
+            }
+            
+            roshambo();
+        }
+
+        else {
+            alert('bye');
+        }
+    }
+
+    roshambo();
+</script>
+</head>
+<body></body>
+</html>
